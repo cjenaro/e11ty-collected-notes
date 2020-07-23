@@ -1,0 +1,136 @@
+:root {
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --grey: #444444;
+  --background-color: var(--black);
+  --color: var(--white);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: calc(100vw - 40px);
+  width: 500px;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+pre {
+  background-color: var(--grey);
+  padding: 1rem;
+  min-width: 100%;
+  white-space: pre-wrap;
+}
+
+a {
+  --btn-bg-color: var(--grey);
+  font-weight: bold;
+  color: currentColor;
+  text-decoration: none;
+  background-color: var(--btn-bg-color);
+  border-radius: 100vh;
+  padding: 1em 1.25em;
+}
+
+h1 {
+  font-size: 3.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+body.post header {
+  background-color: var(---grey);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+body.post main {
+  min-height: calc(100vh - 120px);
+  align-items: flex-start;
+}
+
+body.post a, ul li a {
+  padding: 0;
+  background-color: unset;
+  text-decoration: underline;
+}
+
+ul li a {
+  font-weight: normal;
+}
+
+body.post main > * {
+  margin-bottom: 2rem;
+}
+
+body.post footer {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+body.post footer a.previous {
+  margin-right: auto;
+}
+
+body.post footer a.next {
+  margin-left: auto;
+}
