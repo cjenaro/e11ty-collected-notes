@@ -1,0 +1,62 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Theme maker 2002 - My Blog</title>
+        <link rel="stylesheet" href="/css/global.css" />
+    </head>
+        <body class="post">
+            <header>
+                <a href="/blog/">&larr; back</a>
+            </header>
+            <main>
+                <h1>Theme maker 2002</h1>
+<p><a href="https://collectednotes.com/jenaro/theme-maker-2001">← previous post</a></p>
+<p>Ok, I've decided to go much faster and not make this that long, so...</p>
+<h3>picking up where we left off...</h3>
+<p>this is what my src looks like right now:</p>
+<pre><code>src/
+| - modules/
+| - | - html.js
+| - | - inputs.js
+| - | - output.js
+| - | - stateMachine.js
+| - | - tools.js
+| - styles/
+| - | - tools.css
+| - | - output.css
+| - | - thebutton.css
+| - index.js
+</code></pre>
+<h3><code>html.js</code></h3>
+<p>This is just a tagged template function that takes in a <strong>tagged template</strong> and returns a DocumentFragment with the string provided as the innerHTML</p>
+<h3><code>stateMachine.js</code></h3>
+<p>This is a simple state machine implementation, you'll see how I'm using it later. Made following Kent C Dodds <a href="https://kentcdodds.com/blog/implementing-a-simple-state-machine-library-in-javascript">implementation</a></p>
+<h3><code>tools.js</code></h3>
+<p>This will contain the code to add the inputs that will tweak our button's properties.</p>
+<h3><code>inputs.js</code></h3>
+<p>Here we basically export to arrays that will then be added to the tools and render an input.</p>
+<h3><code>output.js</code></h3>
+<p>This will contain the code to show the button's properties so that you can copy them.</p>
+<h3><code>styles</code></h3>
+<p>This folder is pretty self explanatory, I wanted to modularize the styles, since we are using snowpack, we can later add them to the corresponding *.js files.</p>
+<h3><code>index.js</code></h3>
+<p>We'll here is where we merge everything, we will use the state machine to toggle between the two states we have, tools &amp; output, and we will have a function that on every transition checks which fragment of the app should be rendered, kinda like a router but with a state machine.</p>
+<p>And that's it! We are done, 100% custom made, with the help of snowpack 😅</p>
+<p>Remember to check the code out at https://github.com/jenaro94/theme-maker-2000</p>
+<p>Stuff cool to add:</p>
+<ul>
+<li>More properties on the button</li>
+<li>On hover properties</li>
+<li>HTMLElement tag name agnostic</li>
+</ul>
+
+            </main>
+            <footer>
+                <a class="previous" href="/blog/collected-notes-as-a-cms/">&larr; Collected notes as a CMS</a>
+                <a class="next" href="/blog/theme-maker-2001/">Theme maker - 2001 &rarr;</a>
+            </footer>
+        </body>
+    </html>

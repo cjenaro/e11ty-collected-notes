@@ -1,0 +1,73 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Theme maker - 2000 - My Blog</title>
+        <link rel="stylesheet" href="/css/global.css" />
+    </head>
+        <body class="post">
+            <header>
+                <a href="/blog/">&larr; back</a>
+            </header>
+            <main>
+                <h1>Theme maker - 2000</h1>
+<p>So, the idea is to build a full-custom theme maker from scratch, but here's the catch, I'm only allowed to use <strong>css</strong>, <strong>js</strong> and <strong>html</strong>, no libraries allowed 🙅‍♂️. <em>(Catch of the catch, I <em>will</em> be using snowpack because I've been wanting to try it out)</em></p>
+<p>Since the name of this page is actually collected <strong>notes</strong>, this is what I'm doing, taking progressive notes here of how the process goes along.</p>
+<p>The whole purpose of these <em>endeavor</em> is to learn and to test how a webpage could actually be functional today where everything I've built for a client has been using a framework, it's got me thinking, would I be actually able to build something that is useful and solely built with the basics?</p>
+<p>Please do not take me as an example of anything, these will indeed be a bumpy ride, I will, by no means, be taking the best decisions here. I will probably make thousands of mistakes, but still, live and learn.</p>
+<p><em>Footnote: I will not be taking IE11 into account and i'm sorry but I hope it dies.</em></p>
+<h3>The app</h3>
+<p>So, we'll start slowly and work our way up, to begin with, we'll actually make a button maker, for that, we need a page with a <em><em>fancy</em></em> UI where you get to pick the shape and color of your button, once you are happy with the result, the page will spit out the code to paste wherever you want it.</p>
+<p>Here's an image of the app made with my amazing design skills.</p>
+<p><img src="https://photos.collectednotes.com/photos/5598/654fa90c-4ef6-4ee2-8b88-0e0c05c02583" alt="awesome design"></p>
+<h3>Starting point</h3>
+<p>We'll start from the <a href="https://github.com/pikapkg/create-snowpack-app/tree/master/templates/app-template-blank">CSA (Create Snowpack App) blank template</a>, also, in order to keep my state of mind, I will be using prettier with the default config.</p>
+<h6>Whats included</h6>
+<pre><code>.
++-- public
+|   +-- favicon.ico
+|   +-- index.css
+|   +-- index.html
+|   +-- logo.svg
+|   +-- robots.txt 
++-- src
+|   +-- index.js
++-- .npmignore
++-- .prettierrc
++-- package.json
++-- snowpack.config.json
++-- README.md
+</code></pre>
+<h3>Let's get started</h3>
+<p>To begin we'll create our projects folder</p>
+<p><code>npx create-snowpack-app theme-maker-2000 --template @snowpack/app-template-blank --use-yarn</code></p>
+<ul>
+<li>Why that name? Sounds cool, you can change it if you are lame.</li>
+<li>Why yarn? I don't know, I like it better.</li>
+</ul>
+<p>Now, <code>cd theme-maker-2000 &amp;&amp; yarn start</code></p>
+<p>There you go, you should be able to see your project on http://localhost:8080.</p>
+<h3>Coding</h3>
+<p>All we'll do today is remove the lovely confetti dependency. We don't want this post to get that large!</p>
+<p>Navigate to the <code>src/index.js</code> file and lets remove everything and replace it with</p>
+<pre><code class="language-js">const app = document.getElementById('app')
+app.innerHTML = &quot;&lt;h1&gt;Theme Maker 2000!&lt;/h1&gt;&quot;
+</code></pre>
+<p>Now, lets move to the <code>public/index.html</code> file and change the
+img and canvas that the template starts with for a simple</p>
+<pre><code class="language-html">&lt;div id=&quot;app&quot;&gt;No app 😢&lt;/app&gt;
+</code></pre>
+<p>While we are here, you can change the title of the app for anything you'd like, mine is, of course, Theme Maker 2000.</p>
+<p>Next we can remove canvas-confetti from the dependencies on <code>package.json</code> 👐</p>
+<p>If anyone is crazy enough to be following this, the code is at https://github.com/jenaro94/theme-maker-2000</p>
+<p><a href="https://collectednotes.com/jenaro/theme-maker-2001">next post →</a></p>
+
+            </main>
+            <footer>
+                <a class="previous" href="/blog/theme-maker-2001/">&larr; Theme maker - 2001</a>
+                <a class="next" href="/blog/non-profit-devs/">non profit devs &rarr;</a>
+            </footer>
+        </body>
+    </html>
