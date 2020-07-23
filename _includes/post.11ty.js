@@ -1,5 +1,6 @@
 module.exports = (data) => {
     const title = data.title || data.pagination.items[0].title
+    const headline = data.headline || data.pagination.items[0].headline
     let previous = ''
     let next = ''
     let nextTitle = ''
@@ -19,6 +20,7 @@ module.exports = (data) => {
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>${title} - My Blog</title>
+        <meta name="description" content="${headline}"/>
         <link rel="stylesheet" href="/css/global.css" />
     </head>
         <body class="post">
